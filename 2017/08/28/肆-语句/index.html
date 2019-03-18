@@ -157,6 +157,7 @@
 
 
 
+<link href="/js/google-code-prettify/tomorrow-night-bright.css" type="text/css" rel="stylesheet" />
   <title>肆 语句 | 心一</title>
   
 
@@ -433,7 +434,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  927
+                  923
                 </span>
               
 
@@ -459,7 +460,10 @@
 
       
         <p><code>switch</code>语句的<code>case</code>标签必须是整型常量表达式，可以回忆一下什么是整型常量表达式，    整型这种字面意思就不说了，常量表达式呢？1. 值不会改变 2. 在编译时值已知。所以<code>case</code>标签中无法出现浮点数类型以及字符串或者数组类型。</p>
-<p>感觉这章没啥好说的跳着跳着竟然已经到<code>while</code>语句了，当你不确定到底要迭代多少次时，使用<code>while</code>循环比较合适，还有一种适合的地方就是当你想在循环结束后访问循环控制变量。说到<code>while</code>语句的话<code>for</code>语句肯定是逃不了的了，<br><a id="more"></a><br>对于<code>for</code>循环执行的整个流程需要牢记于心，对于如下的<code>for</code>语句：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>( initialize; condition; expression)</span><br><span class="line">&#123;	</span><br><span class="line">	statement;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>初始化值后，先进行condition的判定，如果此时就是<code>false</code>的话会直接跳出循环，如果为<code>true</code>则进入到statement阶段，执行完statement之后才轮到expression来修改之前初始化的变量值，而这个变量值恰好就是condition需要判断的值。所以expression是发生在每次statement迭代之后的，记住这一点！这里特意吧statement写成了语句块的形式，控制语句可以接受单条语句，也可以接受语句块，但是如果粗心在语句块两侧没写大括号的话就会很蛋疼，虽然很想建议大家所有情况都加大括号，但实际上那样会降低代码的可读性所以还是自行决定吧。</p>
+<p>感觉这章没啥好说的跳着跳着竟然已经到<code>while</code>语句了，当你不确定到底要迭代多少次时，使用<code>while</code>循环比较合适，还有一种适合的地方就是当你想在循环结束后访问循环控制变量。说到<code>while</code>语句的话<code>for</code>语句肯定是逃不了的了，<br><a id="more"></a><br>对于<code>for</code>循环执行的整个流程需要牢记于心，对于如下的<code>for</code>语句：<br><pre><code>for( initialize; condition; expression)
+{	
+	statement;
+}</code></pre><br>初始化值后，先进行condition的判定，如果此时就是<code>false</code>的话会直接跳出循环，如果为<code>true</code>则进入到statement阶段，执行完statement之后才轮到expression来修改之前初始化的变量值，而这个变量值恰好就是condition需要判断的值。所以expression是发生在每次statement迭代之后的，记住这一点！这里特意吧statement写成了语句块的形式，控制语句可以接受单条语句，也可以接受语句块，但是如果粗心在语句块两侧没写大括号的话就会很蛋疼，虽然很想建议大家所有情况都加大括号，但实际上那样会降低代码的可读性所以还是自行决定吧。</p>
 <blockquote>
 <p>for语句和while语句的区别是什么?两者之间能否实现完全替换？</p>
 </blockquote>
@@ -591,7 +595,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -723,7 +727,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count"> | 全站字数：13.2k</span>
+  <span class="post-count"> | 全站字数：13.1k</span>
 </div>
 
 <br />Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
@@ -1064,5 +1068,13 @@
 
   
 
+  
+  <script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+   $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+   prettyPrint();
+ })    
+</script>
 </body>
 </html>

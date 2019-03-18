@@ -157,6 +157,7 @@
 
 
 
+<link href="/js/google-code-prettify/tomorrow-night-bright.css" type="text/css" rel="stylesheet" />
   <title>叁 表达式 | 心一</title>
   
 
@@ -433,7 +434,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  866
+                  865
                 </span>
               
 
@@ -470,7 +471,7 @@
 <li>运算符优先级</li>
 </ul>
 <p>所以我也会重点关注这两个方面啦，也不是偷懒吧，因为我觉得讲运算符是干嘛的这个完全没必要，书上都已经写得很清楚了而且实际上也没什么好讲的。。。</p>
-<p>虽然存在复合运算符时规定了明确的优先级，但是没有说明运算对象会按照什么顺序求值。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = f1() * f2();</span><br></pre></td></tr></table></figure></p>
+<p>虽然存在复合运算符时规定了明确的优先级，但是没有说明运算对象会按照什么顺序求值。<br><pre><code>int i = f1() * f2();</code></pre></p>
 <p>上面的表达式中你并不知道先执行f1还是f2，所以如果他们都对同一个变量存在修改操作的话，则会产生意想不到的后果。也正是因为如此，要尽力避免同一条语句中出现对变量的调用以及对变量的修改，除了一些已知的通用的操作，最好将这两步区分开来以表明明确的执行顺序。基本只有在逻辑语句内才会对求值顺序有所规定，因为其受到<strong>短路求值</strong>策略的制约。    </p>
 <p>让我们将目光转向C++中类型转换，在C++中存在两种不同种类的转换方式： 1. 隐式转换 2. 显式转换。</p>
 <p>在什么情况下编译器会自动转换运算对象的类型，也就是执行隐式转换？</p>
@@ -606,7 +607,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -738,7 +739,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count"> | 全站字数：13.2k</span>
+  <span class="post-count"> | 全站字数：13.1k</span>
 </div>
 
 <br />Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
@@ -1079,5 +1080,13 @@
 
   
 
+  
+  <script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+   $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+   prettyPrint();
+ })    
+</script>
 </body>
 </html>

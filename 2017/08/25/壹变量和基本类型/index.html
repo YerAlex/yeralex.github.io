@@ -157,6 +157,7 @@
 
 
 
+<link href="/js/google-code-prettify/tomorrow-night-bright.css" type="text/css" rel="stylesheet" />
   <title>壹 变量和基本类型 | 心一</title>
   
 
@@ -433,7 +434,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,059
+                  2,056
                 </span>
               
 
@@ -481,7 +482,9 @@
 <li><code>auto</code>对于限定多个变量的类型时，必须确保他们的类型都是一致的。</li>
 <li><code>auto</code>会自动忽略顶层<code>const</code>限制，这个特性在对于复合类型对象的定义时十分好理解，但是如果面对单一类型变量的时候就不是那么友好了：</li>
 </ol>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> ci = i , &amp;cr = ci;</span><br><span class="line"><span class="keyword">auto</span> b = ci;  <span class="comment">//b是一个整数！不是整数常量！它的const特性被忽略了！</span></span><br><span class="line"><span class="keyword">auto</span> e = &amp;ci; <span class="comment">//e是一个指向整数常量的指针，毕竟底层const还是要保留的</span></span><br></pre></td></tr></table></figure>
+<pre><code>const int ci = i , &amp;cr = ci;
+auto b = ci;  &#x2F;&#x2F;b是一个整数！不是整数常量！它的const特性被忽略了！
+auto e = &amp;ci; &#x2F;&#x2F;e是一个指向整数常量的指针，毕竟底层const还是要保留的</code></pre>
 <p>如果想偷懒直接使用表达式或者函数类型来定义变量的类型，又不想实际计算表达式或者运行函数的时候，可以用<code>decltype</code>，爽是爽了，但是它的处理方式和<code>auto</code>是不同的。牢记一点：<code>decltype</code>会将所指向对象的所有特性都保留下来！记住这点其实也就没了。还有一个就是<code>decltype((variable))</code>的结果永远是引用，而<code>decltype(variable)</code>只有在对象的确是引用的时候才是引用，这也是十分需要注意的地方。</p>
 
       
@@ -607,7 +610,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -739,7 +742,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count"> | 全站字数：13.2k</span>
+  <span class="post-count"> | 全站字数：13.1k</span>
 </div>
 
 <br />Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
@@ -1080,5 +1083,13 @@
 
   
 
+  
+  <script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+   $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+   prettyPrint();
+ })    
+</script>
 </body>
 </html>
