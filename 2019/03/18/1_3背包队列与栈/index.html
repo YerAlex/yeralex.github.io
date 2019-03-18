@@ -92,7 +92,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Feynman method,Data Structure,Coding," />
 
 
 
@@ -110,17 +110,18 @@
 
 
 
-<meta name="description" content="YauabQCHmL">
-<meta property="og:type" content="website">
-<meta property="og:title" content="心一">
-<meta property="og:url" content="http://yeralex.com/baidu_verify_YauabQCHmL.html">
+<meta name="description" content="test">
+<meta name="keywords" content="Feynman method,Data Structure,Coding">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1_3 背包、队列与栈">
+<meta property="og:url" content="http://yeralex.com/2019/03/18/1_3背包队列与栈/index.html">
 <meta property="og:site_name" content="心一">
-<meta property="og:description" content="YauabQCHmL">
+<meta property="og:description" content="test">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-26T06:01:24.774Z">
+<meta property="og:updated_time" content="2019-03-18T12:48:00.281Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="心一">
-<meta name="twitter:description" content="YauabQCHmL">
+<meta name="twitter:title" content="1_3 背包、队列与栈">
+<meta name="twitter:description" content="test">
 
 
 
@@ -150,14 +151,14 @@
 
 
 
-  <link rel="canonical" href="http://yeralex.com/baidu_verify_YauabQCHmL.html"/>
+  <link rel="canonical" href="http://yeralex.com/2019/03/18/1_3背包队列与栈/"/>
 
 
 
 
 
 <link href="/js/google-code-prettify/tomorrow-night-bright.css" type="text/css" rel="stylesheet" />
-  <title> | 心一</title>
+  <title>1_3 背包、队列与栈 | 心一</title>
   
 
 
@@ -313,33 +314,224 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yeralex.com/2019/03/18/1_3背包队列与栈/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shane Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ov6w68ji1.bkt.clouddn.com/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="心一">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          YauabQCHmL
+          <h1 class="post-title" itemprop="name headline">1_3 背包、队列与栈</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-18T00:00:00+08:00">
+                2019-03-18
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-18T20:48:00+08:00">
+                2019-03-18
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Algrs4/" itemprop="url" rel="index">
+                    <span itemprop="name">Algrs4</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/03/18/1_3背包队列与栈/" class="leancloud_visitors" data-flag-title="1_3 背包、队列与栈">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>test</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Feynman-method/" rel="tag"><i class="fa fa-tag"></i> Feynman method</a>
+          
+            <a href="/tags/Data-Structure/" rel="tag"><i class="fa fa-tag"></i> Data Structure</a>
+          
+            <a href="/tags/Coding/" rel="tag"><i class="fa fa-tag"></i> Coding</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/26/自我访谈(二)/" rel="next" title="自我访谈（二）">
+                <i class="fa fa-chevron-left"></i> 自我访谈（二）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -634,10 +826,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -819,6 +1011,23 @@
 
 
   
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 14606,
+    el: 'wpac-rating',
+    color: 'fc6423'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '//embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
 
   
   
