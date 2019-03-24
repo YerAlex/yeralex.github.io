@@ -117,7 +117,7 @@
 <meta property="og:site_name" content="心一">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yeralex.com/upload_images/1_3_1.png">
-<meta property="og:updated_time" content="2019-03-20T08:19:23.618Z">
+<meta property="og:updated_time" content="2019-03-24T12:51:47.993Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1.3 背包、队列与栈">
 <meta name="twitter:image" content="http://yeralex.com/upload_images/1_3_1.png">
@@ -370,8 +370,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-20T16:19:23+08:00">
-                2019-03-20
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-24T20:51:47+08:00">
+                2019-03-24
               </time>
             
           </span>
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,026
+                  1,632
                 </span>
               
 
@@ -640,7 +640,7 @@ public class Stack&lt;Item&gt; implements Iterable&lt;Item&gt; {
 <pre><code class="java">
 import java.util.Iterator;
 
-public class Queue&lt;Item&gt; implements Iterable{
+public class Queue&lt;Item&gt; implements Iterable&lt;Item&gt;{
         private Node first;
         private Node last;
         private int N;
@@ -689,8 +689,158 @@ public class Queue&lt;Item&gt; implements Iterable{
 }
 </code></pre>
 <p>背包由于操作和栈几乎一致故不单独实现。</p>
-<p>##下为习题部分（为个人编写，存在谬误请指出并谅解~）</p>
-<p>###1.3.10</p>
+<h2 id="下为习题部分（为个人编写，存在谬误请指出并谅解-）"><a href="#下为习题部分（为个人编写，存在谬误请指出并谅解-）" class="headerlink" title="下为习题部分（为个人编写，存在谬误请指出并谅解~）"></a>下为习题部分（为个人编写，存在谬误请指出并谅解~）</h2><h3 id="1-3-10"><a href="#1-3-10" class="headerlink" title="1.3.10"></a>1.3.10</h3><p>在实现<code>Queue</code>的基础上，对未省略括号的中序表达式进行转换</p>
+<pre><code class="java">/* *****************************************************************************
+ *  Name: Transfer infix to postfix
+ *  Date: 2019/03/20
+ *  Description:
+ *  Index of Problems: 1.3.10
+ **************************************************************************** */
+
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
+
+public class InfixToPostfix {
+    public static void main(String[] args) {
+        Stack&lt;String&gt; ops = new Stack&lt;String&gt;();
+        Queue&lt;String&gt; vars = new Queue&lt;String&gt;();
+        Queue&lt;String&gt; res = new Queue&lt;String&gt;();
+        while(!StdIn.isEmpty()){
+            String s = StdIn.readString();
+            if(s.equals(&quot;+&quot;) || s.equals(&quot;-&quot;) || s.equals(&quot;*&quot;) || s.equals(&quot;/&quot;)){
+                ops.push(s);
+            }
+            else if(s.equals(&quot;)&quot;)){
+                while(!vars.isEmpty()) {
+                    res.enqueue(vars.dequeue());
+                }
+                res.enqueue(ops.pop());
+            }
+            else if(!s.equals(&quot;(&quot;))
+                vars.enqueue(s);
+        }
+        for(String st : res)
+            StdOut.print(st+&quot; &quot;);
+        StdOut.println();
+    }
+}
+</code></pre>
+<h3 id="1-3-11"><a href="#1-3-11" class="headerlink" title="1.3.11"></a>1.3.11</h3><p>Java中管道的使用方法为<code>java Prog1 &lt; Input1 | java Prog2</code>.</p>
+<pre><code class="java">/* *****************************************************************************
+ *  Name: Evaluate the result of Postfix
+ *  Date: 2019/03/20
+ *  Description: Easier than the Dijkstra Algorithms because it only use one stack
+ *  Index of Problems: 1.3.11
+ **************************************************************************** */
+
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
+
+public class EvaluatePostfix {
+    public static void main(String[] args) {
+        Stack&lt;Double&gt; result = new Stack&lt;Double&gt;();
+        while(!StdIn.isEmpty()){
+            String s = StdIn.readString();
+            if(s.equals(&quot;+&quot;) || s.equals(&quot;-&quot;) || s.equals(&quot;*&quot;) || s.equals(&quot;/&quot;)){
+                Double temp = result.pop();
+                if(s.equals(&quot;+&quot;))
+                    result.push(result.pop()+temp);
+                else if (s.equals(&quot;-&quot;))
+                    result.push(result.pop()-temp);
+                else if(s.equals(&quot;*&quot;))
+                    result.push(result.pop()*temp);
+                else if(s.equals(&quot;/&quot;))
+                    result.push(result.pop()/temp);
+
+            }
+            else{
+                result.push(Double.parseDouble(s));
+            }
+        }
+        StdOut.println(result.pop());
+    }
+}
+</code></pre>
+<h3 id="1-3-12"><a href="#1-3-12" class="headerlink" title="1.3.12"></a>1.3.12</h3><pre><code class="java">public static Stack&lt;String&gt; copy(Stack&lt;String&gt; s){
+        Stack&lt;String&gt; temp1 = new Stack&lt;String&gt;();
+        Stack&lt;String&gt; temp2 = new Stack&lt;String&gt;();
+        for(String st : s)
+            temp1.push(st);
+        for(String st: temp1)
+            temp2.push(st);
+        return temp2;
+    }
+</code></pre>
+<p>网上的形如出现Stack<t>而非Stack<string>以及出现Iterator类型赋值的答案都是错误答案。</string></t></p>
+<h3 id="1-3-13"><a href="#1-3-13" class="headerlink" title="1.3.13"></a>1.3.13</h3><p>显然由于队列具有先进先出的属性，且输入序列遵从0-9的顺序，所以只有a这一种情况可以实现，其余情况皆无法实现。</p>
+<h3 id="1-3-14"><a href="#1-3-14" class="headerlink" title="1.3.14"></a>1.3.14</h3><pre><code class="java">/* *****************************************************************************
+ *  Name: Resizing Array Queue of Strings
+ *  Date: 2019/03/24
+ *  Description:
+ *  Index of Problems: 1.3.14
+ **************************************************************************** */
+
+public class ResizingArrayQueueOfStrings {
+    private String[] a = new String[1];
+    private int N = 0;
+    private int first = 0;
+    public boolean isEmpty(){
+        return N==0;
+    }
+    public int size(){
+        return N;
+    }
+    public int length(){
+        return a.length;
+    }
+    public void resize(int sz){
+        String[] temp = new String[sz];
+        for(int i = 0; i&lt; N;i++)
+            temp[i] = a[i+first];
+        a = temp;
+        first = 0;
+
+    }
+
+    public void enqueue(String s){
+        if((first+N)==a.length){
+            resize(2*N);
+        }
+        a[N++] = s;
+    }
+
+    public String dequeue(){
+        String s = a[first];
+        a[first] = null;
+        first++;
+        N--;
+        if(N&gt;0 &amp;&amp; N == a.length/4)
+            resize(a.length/2);
+        return s;
+    }
+    public static void main(String[] args) {
+        ResizingArrayQueueOfStrings queue = new ResizingArrayQueueOfStrings();
+        queue.enqueue(&quot;a&quot;);
+        System.out.println(&quot;size(): &quot; + queue.size() + &quot; | count: &quot; + queue.length());
+        queue.enqueue(&quot;b&quot;);
+        System.out.println(&quot;size(): &quot; + queue.size() + &quot; | count: &quot; + queue.length());
+        queue.enqueue(&quot;c&quot;);
+        System.out.println(&quot;size(): &quot; + queue.size() + &quot; | count: &quot; + queue.length());
+        queue.enqueue(&quot;d&quot;);
+        System.out.println(&quot;size(): &quot; + queue.size() + &quot; | count: &quot; + queue.length());
+        queue.enqueue(&quot;e&quot;);
+        System.out.println(&quot;size(): &quot; + queue.size() + &quot; | count: &quot; + queue.length());
+        queue.enqueue(&quot;f&quot;);
+        System.out.println(&quot;size(): &quot; + queue.size() + &quot; | count: &quot; + queue.length());
+        queue.enqueue(&quot;g&quot;);
+        while (!queue.isEmpty()) {
+            System.out.println(queue.dequeue() + &quot; | size(): &quot; + queue.size() + &quot; | count: &quot; + queue.length());
+        }
+
+    }
+}
+
+</code></pre>
 
       
     </div>
@@ -797,8 +947,17 @@ public class Queue&lt;Item&gt; implements Iterable{
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://ov6w68ji1.bkt.clouddn.com/1.jpg"
@@ -912,6 +1071,22 @@ public class Queue&lt;Item&gt; implements Iterable{
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#下为习题部分（为个人编写，存在谬误请指出并谅解-）"><span class="nav-number">1.</span> <span class="nav-text">下为习题部分（为个人编写，存在谬误请指出并谅解~）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-10"><span class="nav-number">1.1.</span> <span class="nav-text">1.3.10</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-11"><span class="nav-number">1.2.</span> <span class="nav-text">1.3.11</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-12"><span class="nav-number">1.3.</span> <span class="nav-text">1.3.12</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-13"><span class="nav-number">1.4.</span> <span class="nav-text">1.3.13</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-14"><span class="nav-number">1.5.</span> <span class="nav-text">1.3.14</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -947,7 +1122,7 @@ public class Queue&lt;Item&gt; implements Iterable{
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count"> | 全站字数：14.2k</span>
+  <span class="post-count"> | 全站字数：14.8k</span>
 </div>
 
 <br />Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
