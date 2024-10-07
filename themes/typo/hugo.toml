@@ -7,29 +7,3 @@ title = 'typo'
 extended = false
 min = "0.116.0"
 
-[params]
-homeIntroTitle = 'Hi!'
-
-homeIntroContent = """
-I am an Italian Software Engineer with a strong foundation in computer science and a passion for solving complex problems. 
-I am interested in a range of topics, including algorithms, distributed systems, databases, and information retrieval.
-"""
-
-[params]
-homeCollectionTitle = 'Posts'
-homeCollection = 'posts'
-
-
-[[params.menu]]
-name = "home"
-url = "/"
-
-[[params.menu]]
-name = "posts"
-url = "/posts"
-
-[params]
-theme = 'auto | light | dark'
-
-[params]
-colorPalette = 'default'
