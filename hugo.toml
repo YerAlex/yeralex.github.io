@@ -26,5 +26,5 @@ url = "/"
 
 [[params.menu]]
 name = "posts"
-url = "/posts"
+url = "/content/posts"
 
