@@ -20,9 +20,11 @@ I am Xinyi Yang from Mainland China, the owner of a small international trading 
 homeCollectionTitle = 'Posts'
 homeCollection = 'posts'
 
+paginationSize = 100
 
 theme = 'light'
 
+breadcrumbs = false
 
 [[params.menu]]
 name = "home"
@@ -32,3 +34,6 @@ url = "/"
 name = "posts"
 url = "/posts"
 
+[[params.menu]]
+name = "tags"
+url = "/tags"
