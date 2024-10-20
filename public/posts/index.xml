@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on XINYI YANG</title>
-    <link>http://localhost:4364/posts/</link>
+    <link>https://www.yeralex.com/posts/</link>
     <description>Recent content in Posts on XINYI YANG</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Oct 2024 15:25:01 +0800</lastBuildDate>
-    <atom:link href="http://localhost:4364/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Oct 2024 13:28:17 +0800</lastBuildDate>
+    <atom:link href="https://www.yeralex.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Visit in Almaty</title>
+      <link>https://www.yeralex.com/posts/visit-in-almaty/</link>
+      <pubDate>Sun, 20 Oct 2024 13:28:17 +0800</pubDate>
+      <guid>https://www.yeralex.com/posts/visit-in-almaty/</guid>
+      <description>&lt;p&gt;Test&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My First Post</title>
-      <link>http://localhost:4364/posts/my-first-post/</link>
+      <link>https://www.yeralex.com/posts/my-first-post/</link>
       <pubDate>Mon, 07 Oct 2024 15:25:01 +0800</pubDate>
-      <guid>http://localhost:4364/posts/my-first-post/</guid>
+      <guid>https://www.yeralex.com/posts/my-first-post/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
     </item>
   </channel>

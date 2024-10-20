@@ -2,17 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:4364/</loc>
+    <loc>https://www.yeralex.com/</loc>
+    <lastmod>2024-10-20T13:28:17+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yeralex.com/posts/</loc>
+    <lastmod>2024-10-20T13:28:17+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yeralex.com/posts/visit-in-almaty/</loc>
+    <lastmod>2024-10-20T13:28:17+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yeralex.com/posts/my-first-post/</loc>
     <lastmod>2024-10-07T15:25:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:4364/posts/my-first-post/</loc>
-    <lastmod>2024-10-07T15:25:01+08:00</lastmod>
+    <loc>https://www.yeralex.com/g-drslebgb06/</loc>
   </url><url>
-    <loc>http://localhost:4364/posts/</loc>
-    <lastmod>2024-10-07T15:25:01+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:4364/g-drslebgb06/</loc>
-  </url><url>
-    <loc>http://localhost:4364/tags/</loc>
+    <loc>https://www.yeralex.com/tags/</loc>
   </url>
 </urlset>

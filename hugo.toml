@@ -14,7 +14,7 @@ googleAnalytics = "G-DRSLEBGB06"
 # Intro on main page, content is markdown
 homeIntroTitle = 'About'
 homeIntroContent = """
-I am Xinyi Yang from Mainland China, the owner of a small international trading company. I have a Bachelor's Degree in Physics from Nanjing University. Inspired by some ideas of **The Almanack Of Naval Ravikant**, I have restarted my blog to record some of my thoughts and experiences. Later, I plan to use it as a gallery to organize my travel photos.
+I am Xinyi Yang from Mainland China, the owner of a small international trading company. I have a Bachelor's Degree in Physics from Nanjing University. Inspired by some ideas of **The Almanack Of Naval Ravikant**, I have restarted my blog to record some of my thoughts and experiences. Later, I plan to use it also as a gallery to organize my travel photos.
 """
 
 homeCollectionTitle = 'Posts'
