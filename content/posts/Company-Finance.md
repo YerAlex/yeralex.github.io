@@ -1,7 +1,7 @@
 +++
 title = 'Company Finance'
 date = 2024-10-20T13:47:15+08:00
-draft = true
+draft = false
 tags = ['management','finance']
 showTags = true
 +++
