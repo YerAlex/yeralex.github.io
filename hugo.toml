@@ -38,4 +38,6 @@ url = "/posts"
 name = "tags"
 url = "/tags"
 
-
+[[params.menu]]
+name = "gallery"
+url = "/gallery"
