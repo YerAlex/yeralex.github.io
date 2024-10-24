@@ -16,4 +16,4 @@ Hyundai and Kia models dominate the scene in Almaty, not only in terms of variet
 Along the way, we found a handful of County, not seeing any Universe buses or any of the HD heavy truck range, but we were pleased with the number of HD45/65 and H350 (low), and the large number of Kia Bongo3, both old and new model, but still not the most headline-grabbing, with Lada and KAMAZ dominating, and the medium-sized trucks are mainly isuzu.
 
 - [x] Arrive at Almaty
-- [ ] Visit Customers
+- [x] Visit Customers
