@@ -4,6 +4,8 @@ date = 2024-10-21T03:32:23+08:00
 draft = false
 +++
 
+![alt text](images/NightViewStJosephCathedral.JPG#light "2024/11/22 Night View of St. Joseph Cathedral")
+![alt text](images/StJosephCathedral.JPG#light "2024/11/22 St. Joseph Cathedral")
 ![alt text](images/SunsetAtRiyadh.JPG#light "2024/10/29 Sunset At Riyadh")
 ![alt text](images/BurjKhalifaAtNight.JPG#light "2024/10/27 Burj Khalifa At Night")
 ![alt text](images/SkyViewOfNightInDubai2.JPG#light "2024/10/27 Sky View At Night In Dubai #2")
